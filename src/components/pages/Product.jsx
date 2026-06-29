@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Product() {
 
@@ -6,8 +7,8 @@ export default function Product() {
     const [categories, setCategories] = useState([]);
     const [error, setError] = useState("");
 
-    const ProductCategoriesAPI = "https://dummyjson.com/products/categories";
-    const ProductAPI = 'https://dummyjson.com/products';
+    const ProductAPI = 'https://dummyjson.com/products'; 
+    const ProductCategoriesAPI = `${ProductAPI}/categories`;
 
     useEffect(() => {
         fetch(ProductCategoriesAPI)
@@ -16,9 +17,8 @@ export default function Product() {
                 setCategories(data);
 
             })
-            .catch((error) => {
-                console.log("Error:", error);
-                setError("Data Not Found");
+            .catch(() => {
+                setError("Category Data Not Found");
             });
     }, []);
 
@@ -28,12 +28,10 @@ export default function Product() {
             .then((data) => {
                 setApiData(data.products);
             })
-            .catch((error) => {
-                setError(error);
+            .catch(() => {
+                setError("Products Data Not Found");
             });
     }, []);
-
-
 
     return (
         <>
@@ -69,7 +67,7 @@ export default function Product() {
 
 
 export function ProductCard({ data }) {
-    const { title, price, description, thumbnail } = data;
+    const { title, price, description, thumbnail, id } = data;
     const discountPrice = price - (price * 15) / 100;
     return (
         <div className="w-full max-w-sm bg-neutral-primary-soft p-4 border border-default bg-white rounded-base shadow-xs">
@@ -100,7 +98,7 @@ export function ProductCard({ data }) {
                         type="button"
                         className="inline-flex text-xs items-center cursor-pointer text-white bg-blue-600 hover:bg-blue-700 border border-transparent font-medium rounded-lg px-3 py-2"
                     >
-                        Add to cart
+                       <Link to={`/product-details/${id}`} >Product Detail </Link>
                     </button>
                 </div>
             </div>
