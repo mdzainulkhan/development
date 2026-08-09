@@ -6,6 +6,7 @@ import TodoList from "./components/pages/TodoList";
 import Faq from "./components/pages/Faq";
 import Product from "./components/pages/Product";
 import ProductDetails from "./components/pages/ProductDetails";
+import BgSwicher from "./components/pages/BgSwitcher";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/todo-list" element={<TodoList />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/bg-switcher" element={<BgSwicher />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
       </Routes>
 

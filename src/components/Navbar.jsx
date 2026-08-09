@@ -6,6 +6,7 @@ const menuItems = [
   { name: "Todo List", path: "/todo-list" },
   { name : "Faq", path: "/faq" },
   { name : "Product", path: "/product" },
+  { name : "Switcher", path: "/bg-switcher" },
 ];
 
 export default function Navbar() {

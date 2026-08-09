@@ -99,51 +99,51 @@ export default function ProductDetails() {
                   <span className="block text-lg mx-3">
                     ${discountPrice.toFixed(2)}
                   </span>
-                 
+
                   <button
                     type="button"
                     className="mt-3 mx-3 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 cursor-pointer"
                   >
                     Add to cart
                   </button>
-                   <button
+                  <button
                     type="button"
                     className="mt-3 bg-yellow-400 text-black px-5 py-2 rounded-lg hover:bg-yellow-500 cursor-pointer"
                   >
                     Buy Now
                   </button>
-                  
+
                 </div>
-                 <h3 className="text-sm me-4 text-gray-500">
-                    M.R.P.: <del>${detailsProduct.price}</del>
-                  </h3>
-                  <div className="flex flex-wrap justify-between mt-4">
-                    <div className="text-center">
-                      <span className="flex justify-center"><FaCertificate  size={20} /></span>
-                      <span>{detailsProduct.warrantyInformation}</span>
-                    </div>
-                    
-                    <div>
-                      <span className="flex justify-center"><FaTextWidth  size={20} /></span>
-                      <span>{detailsProduct.dimensions.width}</span>
-                    </div>
-                    <div>
-                      <span className="flex justify-center"><FaTextHeight  size={20} /></span>
-                      <span>{detailsProduct.dimensions.height}</span>
-                    </div>
-                    <div>
-                      <span className="flex justify-center"><FaShippingFast  size={20} /></span>
-                      <span>{detailsProduct.shippingInformation}</span>
-                    </div>
-                    <div>
-                      <span className="flex justify-center"><FaStore size={20} /></span>
-                      <span>{detailsProduct.availabilityStatus}</span>
-                    </div>
-                    <div>
-                      <span className="flex justify-center"><FaBackward  size={20} /></span>
-                      <span>{detailsProduct.returnPolicy}</span>
-                    </div>
+                <h3 className="text-sm me-4 text-gray-500">
+                  M.R.P.: <del>${detailsProduct.price}</del>
+                </h3>
+                <div className="flex flex-wrap justify-between mt-4">
+                  <div className="text-center">
+                    <span className="flex justify-center"><FaCertificate size={20} /></span>
+                    <span>{detailsProduct.warrantyInformation}</span>
                   </div>
+
+                  <div>
+                    <span className="flex justify-center"><FaTextWidth size={20} /></span>
+                    <span>{detailsProduct.dimensions.width}</span>
+                  </div>
+                  <div>
+                    <span className="flex justify-center"><FaTextHeight size={20} /></span>
+                    <span>{detailsProduct.dimensions.height}</span>
+                  </div>
+                  <div>
+                    <span className="flex justify-center"><FaShippingFast size={20} /></span>
+                    <span>{detailsProduct.shippingInformation}</span>
+                  </div>
+                  <div>
+                    <span className="flex justify-center"><FaStore size={20} /></span>
+                    <span>{detailsProduct.availabilityStatus}</span>
+                  </div>
+                  <div>
+                    <span className="flex justify-center"><FaBackward size={20} /></span>
+                    <span>{detailsProduct.returnPolicy}</span>
+                  </div>
+                </div>
               </div>
             </div>
           )}

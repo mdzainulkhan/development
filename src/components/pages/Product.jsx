@@ -87,7 +87,7 @@ export function ProductCard({ data }) {
                     <div className="flex">
                         <span className="text-lg font-extrabold text-heading mr-1">
                             ${price} </span>
-                        <span className="block text-md font-extrabold text-gray-400">
+                        <span className="text-md text-gray-400">
                             <del> ${discountPrice.toFixed(2)}</del>
                         </span>
                         <sup className="text-xs text-red-500">
@@ -98,7 +98,7 @@ export function ProductCard({ data }) {
                         type="button"
                         className="inline-flex text-xs items-center cursor-pointer text-white bg-blue-600 hover:bg-blue-700 border border-transparent font-medium rounded-lg px-3 py-2"
                     >
-                       <Link to={`/product-details/${id}`} >Product Detail </Link>
+                       <Link to={`/product-details/${id}`} >Detail </Link>
                     </button>
                 </div>
             </div>
